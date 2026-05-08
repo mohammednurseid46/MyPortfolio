@@ -207,6 +207,15 @@ body.dark-theme .nav-links li.active::after {
   transform: rotate(30deg);
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
 /* Hero Section */
 .hero-section {
   height: 100vh;
