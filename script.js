@@ -54,15 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
             navLinksList.classList.toggle('open');
+            menuToggle.classList.toggle('active');
         });
 
         // Close menu when a link is clicked
         navLinksList.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinksList.classList.remove('open');
+                menuToggle.classList.remove('active');
             });
         });
     }
+
     // Theme Switching
     const themeButtons = document.querySelectorAll('.option-btn[data-theme]');
     themeButtons.forEach(btn => {
