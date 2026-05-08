@@ -18,7 +18,7 @@ body.dark-theme {
   --card-bg: rgba(10, 14, 20, 0.8);
   --primary: #00fbff;
   --primary-rgb: 0, 251, 255;
-  background-image: linear-gradient(rgba(5, 7, 10, 0.85), rgba(5, 7, 10, 0.85)), url('mohammednur.png');
+  background-image: linear-gradient(rgba(5, 7, 10, 0.85), rgba(5, 7, 10, 0.85)), url('mohammednur.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
