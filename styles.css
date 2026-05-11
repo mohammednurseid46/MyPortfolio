@@ -392,17 +392,36 @@ body.dark-theme .btn-secondary:hover {
   box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
+  transition: var(--transition);
 }
 
-.image-placeholder::after {
-  content: 'Image Area';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--text-secondary);
-  font-weight: 600;
-  opacity: 0.3;
+.image-placeholder:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--text-primary);
+  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .image-placeholder {
+  background: rgba(var(--primary-rgb), 0.05);
+  border-color: rgba(var(--primary-rgb), 0.2);
+  box-shadow: 0 0 50px rgba(var(--primary-rgb), 0.1);
+}
+
+body.dark-theme .image-placeholder:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 80px rgba(var(--primary-rgb), 0.2);
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.image-placeholder:hover .hero-img {
+  transform: scale(1.05);
 }
 
 /* Scroll Indicator */
@@ -699,6 +718,18 @@ body.dark-theme .theme-card:hover {
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+.typing-cursor {
+  color: var(--text-primary);
+  font-weight: 300;
+  animation: blink 1s infinite;
+  margin-left: 5px;
+}
+
+body.dark-theme .typing-cursor {
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
 }
 
 @media (max-width: 1024px) {
